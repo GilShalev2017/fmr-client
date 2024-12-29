@@ -1,0 +1,65 @@
+<!-- <div class="container">
+  <div class="button-container">
+    <button mat-stroked-button class="add-user-button" (click)="onAddUser()" color="primary">Add User</button>
+  </div>
+  <div *ngIf="usersDataSource.data.length > 0" class="table-container">
+    <mat-table [dataSource]="usersDataSource" matSort>
+      <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Name</mat-header-cell>
+        <mat-cell *matCellDef="let user">{{ user.name }}</mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="actions">
+        <mat-header-cell *matHeaderCellDef>Actions</mat-header-cell>
+        <mat-cell *matCellDef="let user">
+          <button mat-icon-button (click)="onEditUser(user)">
+            <mat-icon class="edit-icon">edit</mat-icon>
+          </button>
+          <button mat-icon-button (click)="onDeleteUser(user)">
+            <mat-icon class="delete-icon">delete</mat-icon>
+          </button>
+        </mat-cell>
+      </ng-container>
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let user; columns: displayedColumns;" (click)="onSelectUser(user.id)"></mat-row>
+    </mat-table>
+    <mat-paginator [pageSizeOptions]="[5, 10, 25]" showFirstLastButtons></mat-paginator>
+  </div>
+
+  <div *ngIf="usersDataSource.data.length === 0">
+    No users available.
+  </div>
+</div> -->
+<div class="container">
+  <div class="button-container">
+    <button mat-stroked-button color="primary" class="add-user-button" (click)="onAddUser()">Add User</button>
+  </div>
+
+  <div *ngIf="usersDataSource.data.length > 0" class="table-container">
+    <mat-table [dataSource]="usersDataSource" matSort>
+      <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Name</mat-header-cell>
+        <mat-cell *matCellDef="let user">{{ user.name }}</mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="actions">
+        <mat-header-cell *matHeaderCellDef class="actions-header">Actions</mat-header-cell>
+        <mat-cell *matCellDef="let user" class="actions-cell">
+          <button mat-icon-button (click)="onEditUser(user)">
+            <mat-icon class="edit-icon">edit</mat-icon>
+          </button>
+          <button mat-icon-button (click)="onDeleteUser(user)">
+            <mat-icon class="delete-icon">delete</mat-icon>
+          </button>
+        </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let user; columns: displayedColumns;" (click)="onSelectUser(user.id)"></mat-row>
+    </mat-table>
+    <mat-paginator [pageSizeOptions]="[5, 10, 25]" showFirstLastButtons></mat-paginator>
+  </div>
+
+  <div *ngIf="usersDataSource.data.length === 0">
+    No users available.
+  </div>
+</div>

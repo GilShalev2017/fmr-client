@@ -1,0 +1,13 @@
+<h1 mat-dialog-title>{{ data.mode === 'add' ? 'Add User' : 'Edit User' }}</h1>
+<form>
+    <div mat-dialog-content>
+        <mat-form-field appearance="outline" class="name-control">
+            <mat-label>Enter your name</mat-label>
+            <input matInput placeholder="Name" [(ngModel)]="user.name" name="name">
+        </mat-form-field>
+    </div>
+    <div mat-dialog-actions>
+        <button mat-stroked-button mat-dialog-close>Cancel</button>
+        <button mat-stroked-button color="primary" (click)="onSave()">Save</button>
+    </div>
+</form>

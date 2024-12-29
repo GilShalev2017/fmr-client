@@ -1,0 +1,4 @@
+<div *ngIf="(selectedUser$ | async) as selectedUser">
+    <h2>{{ selectedUser.name }}</h2>
+    <p>Total Orders: {{ totalOrderSum$ | async }}</p>
+</div>

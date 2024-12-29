@@ -1,0 +1,41 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.button-container {
+    align-self: flex-end;
+}
+
+.edit-icon {
+    color: #4caf50;
+}
+
+.delete-icon {
+    color: #f44336;
+}
+
+.table-container {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.actions-header {
+    display: flex;
+    justify-content: flex-end;
+    text-align: right !important;
+    padding-right: 20px;
+}
+
+.actions-cell {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    padding: 10px;
+}
+
+.mat-header-cell,
+.mat-cell {
+    padding: 10px;
+}

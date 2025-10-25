@@ -21,10 +21,6 @@ export const usersReducer = createReducer(
     ...state,
     selectedUserId: userId,
   })),
-  // on(addUser, (state, { user }) => ({
-  //   ...state,
-  //   entities: { ...state.entities, [user.id]: user },
-  // })),
   on(addUser, (state, { user }) => {
     const newId = getNextId(state.entities);
     const newUser = { ...user, id: newId }; 

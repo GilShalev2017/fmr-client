@@ -9,5 +9,5 @@ export const addUser = createAction('[User API] Add User', props<{ user: User }>
 export const updateUser = createAction('[User API] Update User', props<{ user: User }>());
 export const deleteUser = createAction('[User API] Delete User', props<{ userId: number }>());
 // Order Actions
-export const loadOrders = createAction('[Order API] Load Orders'); //instead of props<{ users: { [id: number]: User } }>
+export const loadOrders = createAction('[Order API] Load Orders'); 
 export const loadOrdersSuccess = createAction('[Order API] Load Orders Success', props<{ orders: Order[] }>());
